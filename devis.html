@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Dossier de demande de devis — DAM TRUCK</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0b0b0c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/logo-mark-dark.png" />
+  <link rel="apple-touch-icon" href="images/logo-mark-dark.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    body { background: var(--ink); }
+    .rbar { position: sticky; top: 0; z-index: 10; background: rgba(11,11,12,.94); color: var(--ivory); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line-d); }
+    .rbar__in { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding-block: .8rem; flex-wrap: wrap; }
+    .rbar a.back { font-size: .66rem; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-soft); }
+    .rbar__act { display: flex; gap: .6rem; flex-wrap: wrap; }
+    .rbar .btn { padding: .75rem 1.1rem; font-size: .64rem; }
+    .lead-in { text-align: center; color: var(--ivory-mut); font-size: .8rem; letter-spacing: .14em; margin-top: 1.6rem; }
+
+    .lh { position: relative; width: min(100% - 2rem, 860px); margin: 1.4rem auto 3rem; background: var(--white); color: var(--text); box-shadow: 0 50px 100px -40px rgba(0,0,0,.8); overflow: hidden; }
+    .lh::before { content: ""; position: absolute; inset: 12px; border: 1px solid rgba(182,146,86,.55); pointer-events: none; z-index: 2; }
+    .lh::after { content: ""; position: absolute; inset: 17px; border: .5px solid rgba(182,146,86,.35); pointer-events: none; z-index: 2; }
+    .lh__band { height: 74px; background: url("images/guilloche-band.svg") repeat-x center / auto 74px, linear-gradient(180deg, #0b0b0c, #16150f); border-bottom: 2px solid var(--gold); }
+    .lh__rosette { position: absolute; z-index: 0; right: -140px; top: 220px; width: 560px; opacity: .07; pointer-events: none; }
+    .lh__in { position: relative; z-index: 1; padding: clamp(1.6rem, 5vw, 3.4rem); }
+    .lh__head { display: flex; justify-content: space-between; align-items: flex-start; gap: 1.4rem; margin-top: -3.6rem; }
+    .lh__logo { width: clamp(128px, 24vw, 176px); }
+    .lh__ref { margin-top: 3.8rem; text-align: right; font-size: .6rem; letter-spacing: .24em; text-transform: uppercase; color: var(--muted); line-height: 2; }
+    .lh__ref b { display: block; font-family: var(--ff-display); font-weight: 500; font-size: 1.05rem; letter-spacing: .12em; color: var(--ink); }
+    .lh__title { margin-top: 2.2rem; font-family: var(--ff-display); font-weight: 500; font-size: clamp(1.9rem, 4.6vw, 2.8rem); letter-spacing: .04em; line-height: 1.05; }
+    .lh__sub { margin-top: .5rem; font-family: var(--ff-serif); font-style: italic; font-size: 1.15rem; color: var(--gold-ink); }
+    .lh__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin-top: 2rem; }
+    .lh__box { border-top: 1px solid var(--ink); padding-top: .8rem; }
+    .lh__box h3 { font-family: var(--ff-sans); font-size: .6rem; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--gold-ink); margin-bottom: .6rem; }
+    .lh__box p { font-family: var(--ff-serif); font-size: 1.08rem; line-height: 1.5; }
+    .lh__box small { display: block; font-family: var(--ff-sans); font-size: .8rem; color: var(--muted); }
+    .lh__table { width: 100%; margin-top: 2rem; border-collapse: collapse; }
+    .lh__table caption { text-align: left; font-size: .6rem; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--gold-ink); padding-bottom: .6rem; }
+    .lh__table th, .lh__table td { padding: .8rem 0; border-bottom: 1px dashed var(--line-2); text-align: left; vertical-align: top; }
+    .lh__table th { width: 36%; font-size: .62rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); padding-top: 1rem; }
+    .lh__table td { font-family: var(--ff-serif); font-size: 1.05rem; }
+    .lh__est { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 2rem; background: var(--gold); border: 1px solid var(--gold); }
+    .lh__est > div { background: var(--ink); color: var(--ivory); padding: 1.1rem 1.3rem; }
+    .lh__est small { display: block; font-size: .58rem; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--gold-soft); }
+    .lh__est b { display: block; margin-top: .4rem; font-family: var(--ff-display); font-weight: 500; font-size: 1.35rem; color: #fff; }
+    .lh__est p { margin-top: .3rem; font-size: .82rem; color: var(--ivory-mut); }
+    .lh__steps { margin-top: 2.2rem; counter-reset: s; list-style: none; border-top: 1px solid var(--ink); }
+    .lh__steps h3 { font-size: .6rem; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--gold-ink); margin: .8rem 0 .2rem; }
+    .lh__steps li { counter-increment: s; display: grid; grid-template-columns: 2.6rem 1fr; padding: .7rem 0; border-bottom: 1px dashed var(--line-2); font-size: .95rem; }
+    .lh__steps li::before { content: "0" counter(s); font-family: var(--ff-display); color: var(--gold-ink); letter-spacing: .14em; }
+    .lh__steps b { font-family: var(--ff-serif); font-weight: 500; font-size: 1.05rem; }
+    .lh__note { margin-top: 1.8rem; padding: 1rem 1.2rem; background: var(--paper); border-left: 2px solid var(--gold); font-family: var(--ff-serif); font-size: 1rem; }
+    .lh__sign { display: grid; grid-template-columns: 1fr auto; gap: 1.4rem; align-items: end; margin-top: 2.6rem; }
+    .lh__sign span { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+    .lh__sig { font-family: var(--ff-script); font-size: clamp(2rem, 6vw, 2.8rem); line-height: 1.2; clip-path: inset(0 100% 0 0); animation: sigWrite 2.4s cubic-bezier(.4,0,.2,1) .6s forwards; }
+    .lh__name { padding-top: .5rem; border-top: 1px solid var(--ink); font-family: var(--ff-display); font-size: .82rem; letter-spacing: .14em; }
+    .lh__seal { width: 128px; height: 128px; transform: rotate(-10deg); }
+    .lh__legal { margin-top: 2.4rem; padding-top: 1rem; border-top: 1px solid var(--gold); font-size: .66rem; line-height: 1.8; color: var(--muted); }
+    .lh__legal em { display: block; font-style: italic; color: var(--text-2); margin-bottom: .3rem; }
+    .lh__empty { padding: 5rem 1.5rem; text-align: center; }
+    @media (max-width: 640px) {
+      .lh__grid, .lh__est { grid-template-columns: 1fr; }
+      .lh__head { flex-direction: column; } .lh__ref { margin-top: 0; text-align: left; }
+      .lh__sign { grid-template-columns: 1fr; } .lh__seal { justify-self: end; margin-top: -1rem; }
+      .rbar .btn { flex: 1; justify-content: center; } .rbar__act { width: 100%; }
+    }
+    @media print {
+      @page { size: A4; margin: 8mm; }
+      body { background: #fff; }
+      body > *:not(.lh) { display: none !important; }
+      body > .lh { display: block !important; width: 100%; margin: 0; box-shadow: none; }
+      .lh__band, .lh__est > div { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .lh__sig { clip-path: none; animation: none; }
+      .lh__steps, .lh__sign { break-inside: avoid; }
+    }
+  </style>
+  <script src="assets/data.js" defer></script>
+  <script src="assets/i18n.js" defer></script>
+  <script src="assets/pdf.js" defer></script>
+</head>
+<body>
+  <div class="rbar">
+    <div class="container rbar__in">
+      <a class="back" href="concassage.html#devis">← Retour au dossier</a>
+      <div class="rbar__act">
+        <button class="btn btn--gold" type="button" data-print>Télécharger en PDF <span class="btn__arrow">↓</span></button>
+        <a class="btn btn--wa" data-wa href="https://wa.me/31639874182" target="_blank" rel="noopener">Envoyer sur WhatsApp</a>
+      </div>
+    </div>
+  </div>
+  <p class="lead-in">Votre dossier est prêt. Téléchargez-le, puis envoyez-le nous.</p>
+
+  <article class="lh" data-lh><div class="lh__empty">…</div></article>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const DT = window.DT || {}, box = document.querySelector("[data-lh]");
+    const T = (s, v) => (window.I18N ? window.I18N.t(s, v) : s);
+    const LOC = (window.I18N && window.I18N.locale) || "fr-FR";
+    const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const dash = (v) => (v === undefined || v === null || v === "" || (Array.isArray(v) && !v.length) ? "—" : v);
+    const fmt = (n) => new Intl.NumberFormat("fr-FR").format(n);
+    let d = null;
+    try { d = JSON.parse(sessionStorage.getItem("dtDevis") || "null"); } catch (e) {}
+    if (!d) {
+      box.innerHTML = `<div class="lh__empty"><p class="h3">${T("Aucun dossier en cours")}</p><p class="small" style="margin-top:.6rem">${T("Remplissez d'abord votre demande de devis.")}</p><p style="margin-top:1.6rem"><a class="link" href="concassage.html#devis">${T("Remplir le dossier")} →</a></p></div>`;
+      document.querySelector("[data-print]").hidden = true;
+      document.querySelector("[data-wa]").hidden = true;
+      return;
+    }
+    const date = new Date(d.date).toLocaleDateString(LOC, { day: "2-digit", month: "long", year: "numeric" });
+    const fr = d.fractions || [];
+    const hard = ["Basalte", "Granite"].includes(d.materiau);
+    const fine = fr.some((x) => x !== "40/80");
+    const plant = [T("Alimentateur + pré-crible"), T("Concasseur à mâchoires")];
+    if (fine || !fr.length) plant.push(T(hard ? "Concasseur à cône" : "Concasseur à percussion"));
+    if (fr.length) plant.push(T("Crible") + " · " + T("Convoyeurs de stockage") + " × " + fr.length);
+    plant.push(T("Chargeuse sur pneus"));
+    const est = d.dMin === d.dMax ? T(d.dMin > 1 ? "≈ {a} jours" : "≈ {a} jour", { a: d.dMin }) : T("≈ {a} à {b} jours", { a: d.dMin, b: d.dMax });
+    box.innerHTML = `
+      <div class="lh__band" aria-hidden="true"></div>
+      <img class="lh__rosette" src="images/guilloche-rosette.svg" alt="" aria-hidden="true">
+      <div class="lh__in">
+        <header class="lh__head">
+          <img class="lh__logo" src="images/logo-dark.png" alt="DAM TRUCK">
+          <div class="lh__ref">${T("Dossier de demande")}<b>${esc(d.ref)}</b>Casablanca · ${esc(date)}</div>
+        </header>
+        <h1 class="lh__title">${T("Demande de devis")}</h1>
+        <p class="lh__sub">${T("Concassage & criblage mobile")}</p>
+        <div class="lh__grid">
+          <div class="lh__box"><h3>${T("Établi pour")}</h3><p>${esc(dash(d.nom))}${d.societe ? `<small>${esc(d.societe)}</small>` : ""}<small>${esc(dash(d.tel))}</small></p></div>
+          <div class="lh__box"><h3>${T("Chantier")}</h3><p>${esc(dash(d.lieu))}<small>${T("Démarrage")} : ${esc(T(dash(d.delai)))}</small></p></div>
+        </div>
+        <table class="lh__table">
+          <caption>${T("Votre projet")}</caption>
+          <tr><th>${T("Type de projet")}</th><td>${esc(T(dash(d.projet)))}</td></tr>
+          <tr><th>${T("Matériau")}</th><td>${esc(T(dash(d.materiau)))}</td></tr>
+          <tr><th>${T("Fractions")}</th><td>${esc(fr.length ? fr.map((x) => T(x)).join(" · ") : "—")}</td></tr>
+          <tr><th>${T("Volume")}</th><td>${T("{v} tonnes", { v: fmt(d.volume) })}</td></tr>
+        </table>
+        <div class="lh__est">
+          <div><small>${T("Durée de production indicative")}</small><b>${esc(est)}</b><p>${T("Pour une station, sur la base de")} ${fmt(DT.rateMin || 1200)} – ${fmt(DT.rateMax || 1800)} ${T("t/jour. Confirmée après visite technique.")}</p></div>
+          <div><small>${T("Station recommandée")}</small><p style="color:#f5f0e6;font-size:.88rem;line-height:1.7;margin-top:.5rem">${plant.map(esc).join("<br>")}</p></div>
+        </div>
+        ${d.note ? `<p class="lh__note">${esc(d.note)}</p>` : ""}
+        <ol class="lh__steps">
+          <h3>${T("Les prochaines étapes")}</h3>
+          <li><span><b>${T("Appel de notre directeur")}</b> — ${T("sous 48 heures, pour préciser votre besoin.")}</span></li>
+          <li><span><b>${T("Visite technique")}</b> — ${T("roche, accès, implantation de la station.")}</span></li>
+          <li><span><b>${T("Offre ferme")}</b> — ${T("prix, fractions et planning, par écrit.")}</span></li>
+        </ol>
+        <div class="lh__sign">
+          <div>
+            <span>${T("Pour DAM TRUCK")}</span>
+            <div class="lh__sig" translate="no">Mohammed Damnati</div>
+            <div class="lh__name">${esc(T("Mohammed Damnati")).toUpperCase()} — ${T("Gérant")}</div>
+          </div>
+          <svg class="lh__seal" viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="lhs" d="M60 60 m-45 0 a45 45 0 1 1 90 0 a45 45 0 1 1 -90 0"/></defs>
+            <circle cx="60" cy="60" r="56" fill="none" stroke="#b69256" stroke-width="1.8"/><circle cx="60" cy="60" r="36" fill="none" stroke="#b69256" stroke-width=".8"/>
+            <text font-family="Cinzel, serif" font-size="9.5" letter-spacing="3" fill="#8c6f3f"><textPath href="#lhs">DAM TRUCK · CASABLANCA · MAROC ·</textPath></text>
+            <image href="images/logo-mark-dark.png" x="35" y="47" width="50" height="29.4" preserveAspectRatio="xMidYMid meet"/>
+          </svg>
+        </div>
+        <footer class="lh__legal">
+          <em>${T("Document indicatif et non contractuel. L'offre ferme est établie après visite technique.")}</em>
+          DAM TRUCK — Concassage &amp; Vente Achat Matériel TP · ${esc(DT.address || "")}<br>
+          ${T("Tél / WhatsApp")} : ${esc(DT.phone || "")} · ${esc(DT.email || "")} · RC 528819 · IF 51688116 · ICE 002990276000013
+        </footer>
+      </div>`;
+    document.title = `${T("Demande de devis")} ${d.ref} — DAM TRUCK`;
+    const msg = [`Bonjour DAM TRUCK,`, `Voici mon dossier de demande de devis ${d.ref} (PDF à suivre).`, ``, `• ${d.projet || "—"} · ${d.materiau || "—"}`, `• ${fr.join(", ") || "—"} · ${fmt(d.volume)} t`, `• ${d.lieu || "—"}`, ``, `${d.nom || ""} — ${d.tel || ""}`].join("\n");
+    document.querySelector("[data-wa]").href = `https://wa.me/${DT.wa}?text=${encodeURIComponent(msg)}`;
+    document.querySelector("[data-print]").addEventListener("click", (e) => window.DTPdf(document.querySelector("[data-lh]"), "DAM-TRUCK-Dossier-devis.pdf", e.currentTarget));
+  });
+  </script>
+</body>
+</html>

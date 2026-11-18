@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>DAM TRUCK — Concassage, Criblage &amp; Vente de Matériel TP au Maroc</title>
+  <meta name="description" content="DAM TRUCK : concassage mobile, criblage et vente / achat de matériel de travaux publics. Basés à Casablanca, déployés partout au Maroc. Devis en 48 h — +212 661 48 59 20." />
+  <meta name="theme-color" content="#0b0b0c" />
+  <link rel="preload" as="image" href="images/reel-poster.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/logo-mark-dark.png" />
+  <link rel="apple-touch-icon" href="images/logo-mark-dark.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="DAM TRUCK" />
+  <meta property="og:title" content="DAM TRUCK — Concassage, Criblage &amp; Matériel TP" />
+  <meta property="og:description" content="Concassage mobile, criblage et vente de matériel TP. Casablanca — partout au Maroc." />
+  <meta property="og:image" content="https://www.damtruck.com/images/station-concassage.jpg" />
+  <script>
+    /* Entrée cinématique à chaque arrivée sur le site (pas lors d'une navigation interne) */
+    try { if (!sessionStorage.getItem("dtNav") && location.hash !== "#movie") { document.documentElement.classList.add("entree-pending"); setTimeout(function () { if (!document.querySelector(".entree")) document.documentElement.classList.remove("entree-pending"); }, 6000); } } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/data.js" defer></script>
+  <script src="assets/i18n.js" defer></script>
+  <script src="assets/main.js" defer></script>
+  <script src="assets/cine.js" defer></script>
+  <script src="assets/ciel.js" defer></script>
+  <script src="assets/entree.js" defer></script>
+  <script src="assets/movie.js" defer></script>
+</head>
+<body data-entree>
+
+  <!-- ═════════════════════════ HEADER ═════════════════════════ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="DAM TRUCK — Accueil">
+        <span class="brand__mark" aria-hidden="true"><img class="brand__logo brand__logo--dark" src="images/logo-mark-dark.png" alt="" width="240" height="141" /><img class="brand__logo brand__logo--light" src="images/logo-mark-light.png" alt="" width="240" height="141" /></span>
+        <span><span class="brand__name">DAM TRUCK</span><span class="brand__sub">Concassage · Matériel TP</span></span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a class="nav__link is-active" href="index.html">Accueil</a>
+        <a class="nav__link" href="concassage.html">Concassage &amp; Criblage</a>
+        <a class="nav__link" href="machines.html">Machines</a>
+        <a class="nav__link" href="index.html#movie">Le film</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+        <a class="btn nav__cta" href="concassage.html#devis">Devis 48 h</a>
+      </nav>
+      <button class="nav__toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mnav" aria-label="Menu mobile">
+    <a class="mnav__link" href="index.html"><span>01</span>Accueil</a>
+    <a class="mnav__link" href="concassage.html"><span>02</span>Concassage</a>
+    <a class="mnav__link" href="machines.html"><span>03</span>Machines</a>
+    <a class="mnav__link" href="index.html#movie"><span>04</span>Le film</a>
+    <a class="mnav__link" href="contact.html"><span>05</span>Contact</a>
+    <div class="mnav__foot"><a href="tel:+212661485920">+212 661 48 59 20</a><a href="mailto:info@damtruck.com">info@damtruck.com</a><span>Casablanca · Maroc</span></div>
+  </nav>
+
+  <main>
+    <!-- ═════════════════════════ HERO — film terrain ═════════════════════════
+         One edited reel (images/reel.mp4, 47 s, vertical, 1080×1920) played in three
+         panels with time offsets on desktop, one full-screen panel on phones. -->
+    <section class="cine" data-dark>
+      <div class="cine__panels" aria-hidden="true">
+        <div class="cine__panel"><video data-cine data-offset="0" muted playsinline loop preload="auto" poster="images/reel-poster.jpg"><source src="images/reel.mp4" type="video/mp4" /></video><span class="cine__no">I</span></div>
+        <div class="cine__panel cine__panel--2"><video data-cine data-offset="16" muted playsinline loop preload="none" poster="images/reel-poster.jpg"></video><span class="cine__no">II</span></div>
+        <div class="cine__panel cine__panel--3"><video data-cine data-offset="32" muted playsinline loop preload="none" poster="images/reel-poster.jpg"></video><span class="cine__no">III</span></div>
+      </div>
+      <div class="cine__shade" aria-hidden="true"></div>
+      <div class="cine__hud" aria-hidden="true"><span class="cine__rec">Sur chantier</span><span class="cine__tc" data-tc>00:00:00</span></div>
+      <div class="container cine__inner">
+        <span class="eyebrow reveal">Casablanca · Partout au Maroc</span>
+        <h1 class="display cine__title kinetic">La roche,<br><em>maîtrisée.</em></h1>
+        <p class="lead cine__lead reveal" data-d="2">Concassage mobile, criblage et vente de matériel de travaux publics. Nous apportons la station sur votre chantier — et la bonne machine dans votre parc.</p>
+        <div class="cine__actions reveal" data-d="3">
+          <a class="btn btn--gold" href="concassage.html#devis">Demander un devis <span class="btn__arrow">→</span></a>
+          <a class="btn" href="machines.html">Machines à vendre <span class="btn__arrow">→</span></a>
+        </div>
+        <div class="cine__meta reveal" data-d="4">
+          <div><strong>30</strong><span>Machines</span></div>
+          <div><strong>48 h</strong><span>Mobilisation</span></div>
+          <div><strong>7/7</strong><span>Sur le terrain</span></div>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"></div>
+    </section>
+
+    <!-- ═════════════════════════ TICKER ═════════════════════════ -->
+    <div class="ticker ticker--light" aria-hidden="true">
+      <div class="ticker__track">
+        <span>Concassage mobile</span><span>Criblage</span><span>Granulats calibrés</span><span>Vente de matériel</span><span>Sourcing Europe</span><span>Transport d'engins</span><span>Carrières</span><span>Routes &amp; infrastructures</span>
+        <span>Concassage mobile</span><span>Criblage</span><span>Granulats calibrés</span><span>Vente de matériel</span><span>Sourcing Europe</span><span>Transport d'engins</span><span>Carrières</span><span>Routes &amp; infrastructures</span>
+      </div>
+    </div>
+
+    <!-- ═════════════════════════ DEUX MÉTIERS ═════════════════════════ -->
+    <section class="section s-paper">
+      <div class="container">
+        <div class="shead">
+          <div>
+            <div class="chapter reveal" data-chapter="I" data-title="La Roche"><span>Chapitre I</span><b>La Roche</b></div>
+            <span class="eyebrow reveal">Deux métiers · Une exigence</span>
+            <h2 class="h2 shead__title kinetic">Que vous cherchiez du granulat<br>ou une machine — <em>c'est ici.</em></h2>
+          </div>
+          <p class="shead__aside reveal" data-d="2">Un seul interlocuteur pour produire vos matériaux sur site, ou pour acheter et vendre du matériel de chantier vérifié.</p>
+        </div>
+        <div class="doors">
+          <a class="door reveal" href="concassage.html" data-cursor="view">
+            <div class="door__img"><img src="images/doosan-r6.jpg" alt="Pelle Doosan alimentant le concasseur Keestrack R6 de DAM TRUCK" style="object-position:50% 40%" loading="lazy" /></div>
+            <div class="door__body">
+              <span class="door__no">I — Pour vos projets</span>
+              <h3 class="door__title">Concassage<br>&amp; Criblage</h3>
+              <p class="door__text">Nous installons une station mobile sur votre chantier et produisons vos granulats aux fractions exactes demandées.</p>
+              <ul class="door__list"><li>0/4</li><li>4/10</li><li>10/14</li><li>GNT 0/31.5</li><li>0/40</li><li>0/100</li></ul>
+              <div class="door__go"><span>Découvrir &amp; estimer</span><i>→</i></div>
+            </div>
+          </a>
+          <a class="door reveal" data-d="1" href="machines.html" data-cursor="view">
+            <div class="door__img"><img src="images/j1170.jpg" alt="Concasseur Terex Finlay J-1170" loading="lazy" /></div>
+            <div class="door__body">
+              <span class="door__no">II — Pour votre parc</span>
+              <h3 class="door__title">Vente &amp; Achat<br>de machines</h3>
+              <p class="door__text">Concasseurs, cribles, chargeuses, camions. Des machines que nous connaissons, inspectées et prêtes à travailler.</p>
+              <ul class="door__list"><li>Concasseurs</li><li>Cribles</li><li>Chargeuses</li><li>Camions</li><li>Sourcing Europe</li></ul>
+              <div class="door__go"><span>Voir le catalogue</span><i>→</i></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ DAMTRUCK MOVIE — avant-première (assets/movie.js) ═════════════════════════ -->
+    <section class="movie" id="movie" data-dark data-movie aria-label="DAMTRUCK MOVIE — le film officiel">
+      <video class="movie__backdrop" data-lazy data-src="images/movie/backdrop.mp4" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <div class="movie__grain" aria-hidden="true"></div>
+      <div class="container movie__inner">
+        <header class="movie__head">
+          <span class="eyebrow eyebrow--center reveal">Avant-première · Le film officiel</span>
+          <h2 class="movie__title kinetic" aria-label="DAMTRUCK MOVIE"><span>DAMTRUCK</span><em>MOVIE</em></h2>
+          <p class="movie__billing reveal" data-d="1">DAM TRUCK présente <i>·</i> un film tourné sur nos chantiers <i>·</i> Casablanca — Maroc <i>·</i> 1 min 51</p>
+        </header>
+
+        <div class="movie__stage reveal" data-d="2">
+          <canvas class="movie__ambi" data-movie-ambi aria-hidden="true"></canvas>
+          <figure class="movie__screen corners" data-movie-screen><i class="c-bl"></i><i class="c-br"></i>
+            <video class="movie__video" data-movie-video playsinline preload="none" poster="images/movie/poster.jpg"
+              data-src="images/movie/damtruck-movie.mp4" data-src-mobile="images/movie/damtruck-movie-mobiel.mp4" aria-label="DAMTRUCK MOVIE"></video>
+            <div class="movie__leader" data-movie-leader aria-hidden="true"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="86" /><circle cx="100" cy="100" r="62" /><path d="M100 14 V186 M14 100 H186" /><circle class="movie__sweep" cx="100" cy="100" r="74" /></svg><b data-movie-count>3</b></div>
+            <button class="movie__play" type="button" data-movie-play aria-label="Lancer le film avec le son">
+              <svg class="movie__ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="mvring" d="M100 100 m-78 0 a78 78 0 1 1 156 0 a78 78 0 1 1 -156 0" /></defs>
+                <circle cx="100" cy="100" r="92" /><circle cx="100" cy="100" r="64" />
+                <text><textPath href="#mvring">DAMTRUCK MOVIE · AVANT-PREMIÈRE · AVEC LE SON ·</textPath></text></svg>
+              <span class="movie__tri" aria-hidden="true"></span>
+            </button>
+            <div class="movie__end" data-movie-end hidden>
+              <span class="eyebrow eyebrow--center">Fin</span>
+              <p class="movie__endtitle">Le prochain film,<br><em>c'est votre chantier.</em></p>
+              <div class="movie__endbtns">
+                <a class="btn btn--gold" href="concassage.html#devis">Demander un devis <span class="btn__arrow">→</span></a>
+                <button class="btn" type="button" data-movie-share>Partager le film <span class="btn__arrow">↗</span></button>
+                <button class="btn" type="button" data-movie-replay>Revoir ↺</button>
+              </div>
+            </div>
+            <div class="movie__ui" data-movie-ui>
+              <button type="button" class="movie__btn" data-movie-toggle aria-label="Lecture / pause"><svg viewBox="0 0 24 24"><path data-ico-play d="M7 5v14l12-7z" /><path data-ico-pause d="M7 5h3v14H7zM14 5h3v14h-3z" /></svg></button>
+              <div class="movie__bar" data-movie-bar><div class="movie__fill" data-movie-fill></div><div class="movie__chaps" data-movie-chaps></div></div>
+              <span class="movie__time" data-movie-time>0:00 / 1:51</span>
+              <button type="button" class="movie__btn" data-movie-mute aria-label="Son"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z" /><path data-ico-wave d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" /></svg></button>
+              <button type="button" class="movie__btn" data-movie-fs aria-label="Plein écran"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" /></svg></button>
+            </div>
+          </figure>
+        </div>
+
+        <ol class="movie__chapters reveal" data-d="3" data-movie-list></ol>
+      </div>
+      <div class="movie__lights" data-movie-lights aria-hidden="true"></div>
+    </section>
+
+    <!-- ═════════════════════════ CHIFFRES ═════════════════════════ -->
+    <section class="section--tight s-white guilloche-band">
+      <div class="container">
+        <div class="livet reveal">
+          <div class="livet__head"><span class="live__dot" aria-hidden="true"></span><span>Tonnes concassées par DAM TRUCK</span></div>
+          <div class="odo" data-odo aria-label="Tonnes concassées"></div>
+          <p class="livet__cmp" data-cmp aria-live="polite"></p>
+          <span class="livet__note">Mis à jour le 11 novembre 2026</span>
+        </div>
+        <div class="stats">
+          <div class="stat reveal"><span class="stat__num" data-count="30">30</span><span class="stat__label">Machines en flotte</span></div>
+          <div class="stat reveal" data-d="1"><span class="stat__num" data-count="757954">757 954</span><span class="stat__label">Heures-hommes · chantier minier</span></div>
+          <div class="stat reveal" data-d="2"><span class="stat__num" data-count="48">48<sup>h</sup></span><span class="stat__label">Délai de mobilisation</span></div>
+          <div class="stat reveal" data-d="3"><span class="stat__num">7/7</span><span class="stat__label">Disponibilité terrain</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ RÉFÉRENCES — plaques gravées ═════════════════════════ -->
+    <section class="section s-paper refs">
+      <div class="container">
+        <div class="shead">
+          <div>
+            <span class="eyebrow reveal">Références</span>
+            <h2 class="h2 shead__title kinetic">Ils nous ont fait<br><em>confiance.</em></h2>
+          </div>
+          <p class="shead__aside reveal" data-d="2">Entreprises de travaux publics, de construction et industriels : des clients qui ont choisi DAM TRUCK pour leurs chantiers et leur matériel.</p>
+        </div>
+        <div class="plaques" data-refs></div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ CITATION — film La Matière ═════════════════════════ -->
+    <section class="qfilm" data-dark>
+      <div class="qfilm__media" aria-hidden="true">
+        <video data-lazy data-src="images/film/matiere-v.mp4" poster="images/film/matiere-v.jpg" muted loop playsinline preload="none"></video>
+      </div>
+      <img class="qfilm__rosette" src="images/guilloche-rosette.svg" alt="" aria-hidden="true" loading="lazy" />
+      <div class="container qfilm__inner">
+        <div class="qfilm__text">
+          <div class="chapter reveal" data-chapter="II" data-title="La Matière"><span>Chapitre II</span><b>La Matière</b></div>
+          <svg class="qfilm__seal reveal" viewBox="0 0 120 120" aria-hidden="true">
+            <defs><path id="qseal" d="M60 60 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0"/></defs>
+            <circle cx="60" cy="60" r="57" fill="none" stroke="#b69256" stroke-width="1"/>
+            <circle cx="60" cy="60" r="34" fill="none" stroke="#b69256" stroke-width=".6"/>
+            <text font-family="Cinzel, serif" font-size="8.6" letter-spacing="3.4" fill="#d7bd86"><textPath href="#qseal">DAM TRUCK · CASABLANCA · MAROC · DAM TRUCK ·</textPath></text>
+            <image href="images/logo-mark-light.png" x="35" y="47" width="50" height="29.4" preserveAspectRatio="xMidYMid meet"/>
+          </svg>
+          <p class="qfilm__quote kinetic">Nous ne déplaçons pas la terre.<br><em>Nous la transformons.</em></p>
+        </div>
+        <div class="qfilm__frame corners reveal" data-d="1" aria-hidden="true"><i class="c-bl"></i><i class="c-br"></i>
+          <video data-lazy data-src="images/film/matiere-v.mp4" poster="images/film/matiere-v.jpg" muted loop playsinline preload="none"></video>
+          <span class="qfilm__cap">DAM TRUCK · Granulats calibrés</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ SUR LE TERRAIN — film + photos réelles ═════════════════════════ -->
+    <section class="section s-ink terrain" data-dark id="terrain">
+      <div class="container">
+        <div class="shead">
+          <div>
+            <span class="eyebrow reveal">Sur le terrain · Images réelles</span>
+            <h2 class="h2 shead__title kinetic">Nos stations,<br><em>en production.</em></h2>
+          </div>
+          <p class="shead__aside reveal" data-d="2">Pas d'images d'archive : nos concasseurs, nos cribles et nos équipes, filmés sur nos chantiers au Maroc.</p>
+        </div>
+        <figure class="terrain__film corners reveal" data-d="1"><i class="c-bl"></i><i class="c-br"></i>
+          <video data-lazy data-src="images/film/station-ecran.mp4" poster="images/film/station-ecran.jpg" muted loop playsinline preload="none" aria-label="Station de concassage Keestrack et crible McCloskey DAM TRUCK en production"></video>
+          <figcaption>Concasseur Keestrack + crible McCloskey · DAM TRUCK</figcaption>
+        </figure>
+        <div class="terrain__grid">
+          <figure class="t-a reveal"><img src="images/terrain/terrain-1.jpg" alt="Concasseur Keestrack DAM TRUCK alimenté par une pelle CAT en carrière" loading="lazy" /><figcaption>Concassage en carrière</figcaption></figure>
+          <figure class="t-b reveal" data-d="1"><img src="images/terrain/terrain-2.jpg" alt="Crible Keestrack et concasseur rouge en production" loading="lazy" /><figcaption>Criblage &amp; stocks calibrés</figcaption></figure>
+          <figure class="t-c reveal" data-d="2"><img src="images/terrain/terrain-3.jpg" alt="Concasseur mobile rouge et pelle Doosan en carrière" loading="lazy" /><figcaption>Station mobile</figcaption></figure>
+          <figure class="t-d reveal"><img src="images/terrain/terrain-4.jpg" alt="Crible McCloskey DAM TRUCK sur chantier" loading="lazy" /><figcaption>Crible McCloskey</figcaption></figure>
+          <figure class="t-e reveal" data-d="1"><img src="images/terrain/terrain-5.jpg" alt="Chargeuses Volvo chargeant un camion en carrière" loading="lazy" /><figcaption>Chargement des camions</figcaption></figure>
+          <figure class="t-f reveal" data-d="2"><img src="images/terrain/terrain-6.jpg" alt="Crible vert McCloskey 6x20 sur chenilles" loading="lazy" /><figcaption>Crible 6×20 sur chenilles</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ MACHINES À LA UNE ═════════════════════════ -->
+    <section class="section s-stone" data-featured-section>
+      <div class="container">
+        <div class="shead">
+          <div>
+            <div class="chapter reveal" data-chapter="III" data-title="La Machine"><span>Chapitre III</span><b>La Machine</b></div>
+            <span class="eyebrow reveal">Vente · À la une</span>
+            <h2 class="h2 shead__title kinetic">Machines <em>disponibles.</em></h2>
+          </div>
+          <a class="link reveal" data-d="2" href="machines.html">Tout le catalogue →</a>
+        </div>
+        <div class="mgrid" data-featured></div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ CARTE — PRÉSENCE TERRAIN ═════════════════════════ -->
+    <section class="section s-ink" data-dark id="presence">
+      <div class="container mapwrap">
+        <div class="mapinfo">
+          <div class="chapter reveal" data-chapter="IV" data-title="Le Terrain"><span>Chapitre IV</span><b>Le Terrain</b></div>
+          <span class="eyebrow reveal">Présence terrain · En direct</span>
+          <h2 class="h2 shead__title kinetic">Là où nos machines<br><em>travaillent.</em></h2>
+          <div class="live reveal" data-d="2"><span class="live__dot" aria-hidden="true"></span><span><b data-live-count>0</b> <span data-live-label>sites actifs</span></span><small>Mis à jour le <span data-live-date></span></small></div>
+          <ul class="sites reveal" data-d="3" data-sites></ul>
+          <form class="ciel reveal" data-d="4" data-ciel autocomplete="off">
+            <label class="ciel__lbl" for="ciel-q">Votre chantier vu du ciel</label>
+            <div class="ciel__row">
+              <input class="ciel__inp" id="ciel-q" list="ciel-villes" placeholder="Ville de votre chantier — ex. Tanger" />
+              <button class="ciel__go" type="submit" aria-label="Survoler">→</button>
+            </div>
+            <datalist id="ciel-villes"></datalist>
+            <button class="ciel__me" type="button" data-ciel-me>Utiliser ma position</button>
+            <div class="ciel__out" data-ciel-out aria-live="polite" hidden></div>
+          </form>
+          <div class="mapzoom reveal" data-d="4" role="group" aria-label="Zoom de la carte">
+            <button type="button" class="chip" data-zoom="all" aria-pressed="false">Tout le Maroc</button>
+            <button type="button" class="chip" data-zoom="region" aria-pressed="true">Région Casablanca</button>
+          </div>
+        </div>
+        <div class="map reveal" data-d="1">
+          <svg class="map__svg" viewBox="0 0 526 562" data-map role="img" aria-label="Carte du Maroc avec les sites DAM TRUCK">
+            <defs>
+              <radialGradient id="mapglow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#b69256" stop-opacity=".35"/><stop offset="1" stop-color="#b69256" stop-opacity="0"/></radialGradient>
+              <linearGradient id="landg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2722"/><stop offset="1" stop-color="#1c1b19"/></linearGradient>
+            </defs>
+            <g class="map__grid"><line x1="0" y1="543.6" x2="526" y2="543.6"/><line x1="0" y1="471.6" x2="526" y2="471.6"/><line x1="0" y1="399.6" x2="526" y2="399.6"/><line x1="0" y1="327.6" x2="526" y2="327.6"/><line x1="0" y1="255.6" x2="526" y2="255.6"/><line x1="0" y1="183.6" x2="526" y2="183.6"/><line x1="0" y1="111.6" x2="526" y2="111.6"/><line x1="0" y1="39.6" x2="526" y2="39.6"/><line x1="12.7" y1="0" x2="12.7" y2="562"/><line x1="76.0" y1="0" x2="76.0" y2="562"/><line x1="139.4" y1="0" x2="139.4" y2="562"/><line x1="202.8" y1="0" x2="202.8" y2="562"/><line x1="266.1" y1="0" x2="266.1" y2="562"/><line x1="329.5" y1="0" x2="329.5" y2="562"/><line x1="392.8" y1="0" x2="392.8" y2="562"/><line x1="456.2" y1="0" x2="456.2" y2="562"/><line x1="519.6" y1="0" x2="519.6" y2="562"/></g>
+            <path class="map__land" d="M367.2 11.2 C368.3 10.8 371.7 9.8 373.8 9.0 C375.9 8.2 378.1 5.9 379.5 6.5 C381.0 7.1 381.5 10.5 382.4 12.6 C383.3 14.7 383.1 16.8 384.9 19.1 C386.7 21.3 389.8 23.7 392.8 25.9 C395.9 28.1 399.2 30.7 403.0 32.0 C406.7 33.4 411.0 34.1 415.0 33.8 C419.0 33.6 423.0 30.9 426.7 30.6 C430.5 30.3 433.3 32.2 437.2 32.0 C441.1 31.9 446.4 31.3 449.9 29.9 C453.3 28.5 456.0 23.1 457.5 23.8 C458.9 24.4 456.5 31.4 458.4 33.5 C460.3 35.6 464.9 35.5 468.9 36.0 C472.8 36.5 479.4 36.3 481.5 36.4 L492.6 45.0 L494.8 61.2 L498.0 84.6 L506.9 119.5 L516.4 127.8 L511.6 144.0 L475.2 141.1 L457.8 154.8 L434.6 160.2 L434.0 187.2 L408.7 199.8 L378.6 223.2 L345.3 234.7 L310.5 241.9 L276.6 265.7 L276.6 303.5 L276.6 363.6 L171.1 363.6 L171.1 455.4 L137.8 473.4 L137.8 531.7 L14.3 531.7 L11.1 550.8 C11.6 548.4 12.4 545.0 14.3 536.4 C16.1 527.8 18.1 512.0 22.2 500.4 C26.2 488.8 34.0 477.2 38.0 468.0 C42.1 458.8 41.6 455.0 45.9 446.4 C50.2 437.8 57.7 426.2 63.4 417.6 C69.0 409.0 74.4 405.8 79.2 396.0 C84.0 386.2 86.2 370.1 91.9 360.0 C97.5 349.9 106.5 343.0 112.5 336.6 C118.4 330.2 121.7 329.5 126.7 322.2 C131.7 314.9 133.8 300.3 141.9 293.8 C150.0 287.2 164.4 286.8 174.2 283.7 C184.0 280.6 191.5 280.5 199.6 275.4 C207.7 270.3 216.8 259.5 221.8 253.8 C226.8 248.1 225.8 247.4 229.0 241.9 C232.3 236.4 237.7 227.8 240.8 221.4 C243.8 215.0 247.6 208.6 247.1 204.5 C246.6 200.3 239.1 201.1 237.9 196.9 C236.7 192.8 239.5 185.4 240.1 180.0 C240.8 174.6 240.0 170.4 241.7 165.2 C243.4 160.0 247.4 154.2 250.3 149.4 C253.1 144.6 255.5 141.7 258.5 136.8 C261.5 131.9 264.5 125.6 267.7 120.6 C270.9 115.6 275.1 110.3 277.5 107.3 C279.9 104.2 278.5 104.4 282.0 102.6 C285.4 100.8 292.9 98.6 297.8 96.5 C302.6 94.3 307.1 91.7 310.5 90.0 C313.8 88.3 313.3 89.3 317.4 86.8 C321.5 84.2 330.2 78.4 334.5 74.9 C338.8 71.4 340.1 71.0 342.8 66.2 C345.4 61.5 347.8 52.5 350.1 46.8 C352.3 41.1 354.4 36.8 356.1 32.8 C357.8 28.7 358.9 26.7 360.2 23.0 C361.5 19.4 363.1 13.2 363.7 11.2 Z"/>
+            <path class="map__coast" d="M367.2 11.2 C368.3 10.8 371.7 9.8 373.8 9.0 C375.9 8.2 378.1 5.9 379.5 6.5 C381.0 7.1 381.5 10.5 382.4 12.6 C383.3 14.7 383.1 16.8 384.9 19.1 C386.7 21.3 389.8 23.7 392.8 25.9 C395.9 28.1 399.2 30.7 403.0 32.0 C406.7 33.4 411.0 34.1 415.0 33.8 C419.0 33.6 423.0 30.9 426.7 30.6 C430.5 30.3 433.3 32.2 437.2 32.0 C441.1 31.9 446.4 31.3 449.9 29.9 C453.3 28.5 456.0 23.1 457.5 23.8 C458.9 24.4 456.5 31.4 458.4 33.5 C460.3 35.6 464.9 35.5 468.9 36.0 C472.8 36.5 479.4 36.3 481.5 36.4 L492.6 45.0 L494.8 61.2 L498.0 84.6 L506.9 119.5 L516.4 127.8 L511.6 144.0 L475.2 141.1 L457.8 154.8 L434.6 160.2 L434.0 187.2 L408.7 199.8 L378.6 223.2 L345.3 234.7 L310.5 241.9 L276.6 265.7 L276.6 303.5 L276.6 363.6 L171.1 363.6 L171.1 455.4 L137.8 473.4 L137.8 531.7 L14.3 531.7 L11.1 550.8 C11.6 548.4 12.4 545.0 14.3 536.4 C16.1 527.8 18.1 512.0 22.2 500.4 C26.2 488.8 34.0 477.2 38.0 468.0 C42.1 458.8 41.6 455.0 45.9 446.4 C50.2 437.8 57.7 426.2 63.4 417.6 C69.0 409.0 74.4 405.8 79.2 396.0 C84.0 386.2 86.2 370.1 91.9 360.0 C97.5 349.9 106.5 343.0 112.5 336.6 C118.4 330.2 121.7 329.5 126.7 322.2 C131.7 314.9 133.8 300.3 141.9 293.8 C150.0 287.2 164.4 286.8 174.2 283.7 C184.0 280.6 191.5 280.5 199.6 275.4 C207.7 270.3 216.8 259.5 221.8 253.8 C226.8 248.1 225.8 247.4 229.0 241.9 C232.3 236.4 237.7 227.8 240.8 221.4 C243.8 215.0 247.6 208.6 247.1 204.5 C246.6 200.3 239.1 201.1 237.9 196.9 C236.7 192.8 239.5 185.4 240.1 180.0 C240.8 174.6 240.0 170.4 241.7 165.2 C243.4 160.0 247.4 154.2 250.3 149.4 C253.1 144.6 255.5 141.7 258.5 136.8 C261.5 131.9 264.5 125.6 267.7 120.6 C270.9 115.6 275.1 110.3 277.5 107.3 C279.9 104.2 278.5 104.4 282.0 102.6 C285.4 100.8 292.9 98.6 297.8 96.5 C302.6 94.3 307.1 91.7 310.5 90.0 C313.8 88.3 313.3 89.3 317.4 86.8 C321.5 84.2 330.2 78.4 334.5 74.9 C338.8 71.4 340.1 71.0 342.8 66.2 C345.4 61.5 347.8 52.5 350.1 46.8 C352.3 41.1 354.4 36.8 356.1 32.8 C357.8 28.7 358.9 26.7 360.2 23.0 C361.5 19.4 363.1 13.2 363.7 11.2 Z"/>
+            <text class="map__sea" x="120" y="150">Océan Atlantique</text>
+            <text class="map__sea" x="438" y="16">Méditerranée</text>
+            <g class="map__cities"><g class="mk mk--city" data-x="367.2" data-y="12.2"><circle r="1.6"/><text x="6" y="3" text-anchor="start">Tanger</text></g><g class="mk mk--city" data-x="334.5" data-y="74.9"><circle r="1.6"/><text x="6" y="3" text-anchor="start">Rabat</text></g><g class="mk mk--city" data-x="392.8" data-y="74.5"><circle r="1.6"/><text x="6" y="3" text-anchor="start">Fès</text></g><g class="mk mk--city" data-x="297.8" data-y="160.9"><circle r="1.6"/><text x="6" y="3" text-anchor="start">Marrakech</text></g><g class="mk mk--city" data-x="247.1" data-y="204.5"><circle r="1.6"/><text x="6" y="3" text-anchor="start">Agadir</text></g><g class="mk mk--city" data-x="491.0" data-y="51.1"><circle r="1.6"/><text x="-6" y="3" text-anchor="end">Oujda</text></g><g class="mk mk--city" data-x="133.1" data-y="322.2"><circle r="1.6"/><text x="6" y="3" text-anchor="start">Laâyoune</text></g><g class="mk mk--city" data-x="46.6" data-y="446.4"><circle r="1.6"/><text x="6" y="3" text-anchor="start">Dakhla</text></g><g class="mk mk--city" data-x="258.5" data-y="136.8"><circle r="1.6"/><text x="-6" y="3" text-anchor="end">Safi</text></g></g>
+            <g data-pins></g>
+          </svg>
+          <div class="map__card" data-map-card aria-live="polite"></div>
+          <span class="map__note">Carte schématique</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ FILM AU DÉFILEMENT — la benne ═════════════════════════
+         Scrolling drives 40 frames (images/scrub/benne-00…39.jpg) drawn on a canvas. -->
+    <section class="scrub" data-dark data-scrub data-frames="40" data-src="images/scrub/benne-">
+      <div class="scrub__stage">
+        <canvas class="scrub__cv" aria-hidden="true"></canvas>
+        <div class="scrub__shade" aria-hidden="true"></div>
+        <div class="scrub__lines">
+          <p class="scrub__line" data-from="0" data-to=".34">Une benne.</p>
+          <p class="scrub__line" data-from=".34" data-to=".68"><em>24 tonnes.</em></p>
+          <p class="scrub__line" data-from=".68" data-to="1.01">Livrées là où<br>vous en avez besoin.</p>
+        </div>
+        <div class="scrub__bar" aria-hidden="true"><i></i></div>
+        <span class="scrub__hint" aria-hidden="true">Faites défiler</span>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ CTA ═════════════════════════ -->
+    <section class="section s-paper">
+      <div class="container cta">
+        <div class="chapter chapter--center reveal" data-chapter="V" data-title="Votre chantier"><span>Chapitre V</span><b>Votre chantier</b></div>
+        <span class="eyebrow eyebrow--center reveal">Démarrons</span>
+        <h2 class="h1 cta__title kinetic">Un chantier. Une machine.<br><em>Un seul appel.</em></h2>
+        <p class="lead reveal" data-d="2" style="margin:1.4rem auto 0;text-align:center">Dites-nous le lieu, les volumes et le délai. Nous revenons vers vous sous 48 heures avec une proposition claire.</p>
+        <div class="cta__actions reveal" data-d="3">
+          <a class="btn btn--ink" href="concassage.html#devis">Estimer mon projet <span class="btn__arrow">→</span></a>
+          <a class="btn btn--wa" href="https://wa.me/31639874182" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm4.52 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg> WhatsApp</a>
+        </div>
+        <div class="cta__phones reveal" data-d="4"><a class="cta__phone" href="tel:+212661485920">+212 661 48 59 20</a><a class="cta__phone" href="tel:+212661147311">+212 661 14 73 11</a></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═════════════════════════ FOOTER ═════════════════════════ -->
+  <footer class="footer guilloche-top" data-dark>
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a class="footer__plaque" href="index.html" aria-label="DAM TRUCK"><img src="images/logo-light.png" alt="DAM TRUCK — Concassage &amp; Vente Achat Matériel TP" loading="lazy" /></a>
+          <p class="footer__tag">Concassage mobile, criblage, vente et achat de matériel de travaux publics. Casablanca — partout au Maroc.</p>
+        </div>
+        <div><h4>Activités</h4><ul><li><a href="concassage.html">Concassage &amp; criblage</a></li><li><a href="concassage.html#r6">Granulats</a></li><li><a href="concassage.html#devis">Devis en ligne</a></li><li><a href="machines.html">Machines à vendre</a></li><li><a href="machines.html#sourcing">Sourcing Europe</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li><a href="tel:+212661485920">+212 661 48 59 20</a></li><li><a href="tel:+212661147311">+212 661 14 73 11</a></li><li><a href="mailto:info@damtruck.com">info@damtruck.com</a></li><li><a href="https://wa.me/31639874182" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="brochure.html">Brochure PDF</a></li></ul></div>
+        <div><h4>Siège</h4><ul><li>N° 18, Rue 3, Lot Ratc, 1<sup>er</sup> étage</li><li>Al Qods, Sidi Bernoussi</li><li>Casablanca, Maroc</li></ul></div>
+      </div>
+      <div class="footer__big" aria-hidden="true">DAM TRUCK</div>
+      <div class="footer__bottom">
+        <span>© <span data-year>2026</span> DAM TRUCK · Tous droits réservés</span>
+        <span class="footer__legal">RC 528819 · IF 51688116 · ICE 002990276000013 · Patente 31651857</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/31639874182" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp">
+    <span class="wa-float__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm4.52 11.99c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg></span>
+    <span class="wa-float__txt">Écrivez-nous</span>
+  </a>
+</body>
+</html>

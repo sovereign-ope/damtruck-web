@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Passeport machine — DAM TRUCK</title>
+  <meta name="description" content="Passeport machine DAM TRUCK : identité, fiche technique et rapport d'inspection d'une machine, vérifiés par DAM TRUCK." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/logo-mark-dark.png" />
+  <style>
+    :root { --ink:#0b0b0c; --ink2:#141312; --ivory:#ece6d9; --mut:#9b9486; --gold:#b69256; --soft:#d7bd86; --deep:#8c6f3f; --line:rgba(182,146,86,.22);
+      --grad:linear-gradient(120deg,#e3cc95 0%,#b69256 38%,#8c6f3f 62%,#d7bd86 100%); --ok:#7fb48f; --obs:#d9a441; --rep:#8fb3d9; }
+    * { box-sizing:border-box; margin:0; padding:0 }
+    html { background:var(--ink) }
+    body { min-height:100vh; color:var(--ivory); font:300 16px/1.6 Jost,system-ui,sans-serif; background:radial-gradient(1200px 700px at 70% -10%,#2a2318 0%,transparent 60%),var(--ink); -webkit-font-smoothing:antialiased }
+    a { color:inherit }
+    .wrap { max-width:1180px; margin:0 auto; padding:clamp(1rem,4vw,3rem) 16px 4rem }
+    header { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-bottom:1.4rem; border-bottom:1px solid var(--line) }
+    header img { height:34px }
+    header a.back { font:500 .72rem Cinzel,serif; letter-spacing:.3em; text-decoration:none; color:var(--soft) }
+    .doc { position:relative; margin-top:2rem; border:1px solid var(--line); background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,0)); overflow:hidden }
+    .doc::before { content:""; position:absolute; inset:0; background:url(images/guilloche-band.svg) center/cover; opacity:.07; pointer-events:none }
+    .corner { position:absolute; width:22px; height:22px; border-color:var(--gold); border-style:solid }
+    .c1 { left:10px; top:10px; border-width:1px 0 0 1px } .c2 { right:10px; top:10px; border-width:1px 1px 0 0 }
+    .c3 { left:10px; bottom:10px; border-width:0 0 1px 1px } .c4 { right:10px; bottom:10px; border-width:0 1px 1px 0 }
+    .top { display:grid; grid-template-columns:1.15fr 1fr; gap:0; position:relative }
+    .photo { position:relative; min-height:420px; background:#000 }
+    .photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:saturate(.9) contrast(1.05) }
+    .photo::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,transparent 55%,var(--ink) 100%), linear-gradient(0deg,rgba(11,11,12,.8),transparent 40%) }
+    .id { position:relative; padding:clamp(1.5rem,4vw,3rem) }
+    .kicker { font:500 .7rem Cinzel,serif; letter-spacing:.42em; color:var(--soft) }
+    .id h1, .id .kicker, .id .type { padding-right:clamp(0px,9vw,130px) }
+    h1 { margin-top:.6rem; font:400 clamp(2.1rem,4.4vw,3.4rem)/1.05 "Bodoni Moda",serif; background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent }
+    .type { margin-top:.5rem; color:var(--mut) }
+    .serial { margin-top:1.6rem; display:flex; gap:2rem; flex-wrap:wrap }
+    .serial div span { display:block; font:500 .62rem Cinzel,serif; letter-spacing:.3em; color:var(--mut) }
+    .serial div b { font:400 1.25rem "Bodoni Moda",serif; color:var(--ivory) }
+    .status { display:inline-block; margin-top:1.4rem; padding:.35rem .9rem; border:1px solid var(--gold); font:500 .68rem Cinzel,serif; letter-spacing:.3em; color:var(--soft) }
+    .status.vendu { border-color:#7d3b34; color:#d68a7f } .status.reserve { border-color:var(--obs); color:var(--obs) }
+    .seal { position:absolute; right:clamp(1rem,3vw,2.4rem); top:clamp(1rem,3vw,2.4rem); width:118px; height:118px }
+    .specimen { position:absolute; right:-60px; top:38px; transform:rotate(35deg); background:#7d3b34; color:#f1d6cf; font:600 .7rem Cinzel,serif; letter-spacing:.4em; padding:.4rem 4rem; z-index:3 }
+    .grid { display:grid; grid-template-columns:1.1fr 1fr; gap:0; border-top:1px solid var(--line) }
+    section { padding:clamp(1.4rem,3.5vw,2.6rem); position:relative }
+    section + section { border-left:1px solid var(--line) }
+    h2 { font:500 .74rem Cinzel,serif; letter-spacing:.42em; color:var(--soft); margin-bottom:1.1rem }
+    dl { display:grid; grid-template-columns:auto 1fr; gap:.55rem 1.4rem }
+    dt { color:var(--mut); font-size:.9rem } dd { text-align:right; font-size:.95rem }
+    .desc { margin-top:1.4rem; color:#cfc7b8; font:italic 400 1.05rem/1.7 "Bodoni Moda",serif }
+    .bars { display:grid; gap:.7rem }
+    .bar { display:grid; grid-template-columns:1fr auto; gap:.3rem 1rem; font-size:.9rem }
+    .bar i { grid-column:1/-1; height:3px; background:rgba(255,255,255,.07); position:relative }
+    .bar i em { position:absolute; inset:0 auto 0 0; background:var(--grad) }
+    .legend { display:flex; gap:1.2rem; margin-top:1rem; font-size:.8rem; color:var(--mut) }
+    .dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:.4rem }
+    .verdict { margin-top:1.4rem; padding:1rem 1.2rem; border-left:2px solid var(--gold); color:#d8d0c0; font:italic 400 1rem/1.6 "Bodoni Moda",serif }
+    .signed { margin-top:.9rem; font-size:.82rem; color:var(--mut) }
+    .cta { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.6rem }
+    .btn { display:inline-flex; align-items:center; gap:.6rem; padding:.85rem 1.4rem; border:1px solid var(--gold); text-decoration:none; font:500 .72rem Cinzel,serif; letter-spacing:.28em; color:var(--soft); transition:.3s }
+    .btn:hover { background:rgba(182,146,86,.12); color:#f3e3be }
+    .btn.wa { border-color:#1f7a4d; color:#8fd1ac }
+    .qr { display:flex; gap:1.2rem; align-items:center; margin-top:1.6rem; padding-top:1.4rem; border-top:1px solid var(--line) }
+    .qr img { width:96px; height:96px; background:var(--ivory); padding:6px }
+    .qr p { font-size:.85rem; color:var(--mut) }
+    footer { margin-top:2.4rem; text-align:center; font-size:.78rem; color:var(--mut); letter-spacing:.06em }
+    .empty { margin:4rem auto; max-width:560px; text-align:center }
+    @media (max-width:860px) { .top,.grid { grid-template-columns:1fr } .photo { min-height:260px } .photo::after { background:linear-gradient(0deg,var(--ink),transparent 60%) } section + section { border-left:0; border-top:1px solid var(--line) } .seal { width:84px; height:84px } }
+    @media print { body { background:#fff; color:#111 } .btn,.back { display:none } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="index.html"><img src="images/logo-light.png" alt="DAM TRUCK" /></a>
+      <a class="back" href="machines.html">← MACHINES</a>
+    </header>
+    <main id="passport"></main>
+    <footer>DAM TRUCK — Concassage · Criblage · Matériel de travaux publics · Casablanca<br />Passeport émis par DAM TRUCK. Les données proviennent de la fiche et du rapport d'inspection de la machine.</footer>
+  </div>
+  <script src="assets/data.js"></script>
+  <script src="assets/passeport.js"></script>
+</body>
+</html>

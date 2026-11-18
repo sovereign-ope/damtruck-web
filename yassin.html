@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Yassin Mchichi — DAM TRUCK · Carte de visite</title>
+  <meta name="description" content="Carte de visite digitale de Yassin Mchichi (+212 661 24 35 44), Chargé d'affaires de DAM TRUCK. Concassage, criblage, vente et achat de matériel TP. +212 661 48 59 20." />
+  <meta name="theme-color" content="#0b0b0c" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="icon" href="images/logo-mark-dark.png" />
+  <link rel="apple-touch-icon" href="images/logo-mark-dark.png" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Yassin Mchichi — Chargé d'affaires · DAM TRUCK" />
+  <meta property="og:description" content="Concassage · Criblage · Vente &amp; achat de matériel TP — Casablanca" />
+  <meta property="og:image" content="https://www.damtruck.com/images/logo-light.png" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    html, body { background: var(--ink); }
+    .vc { position: relative; min-height: 100svh; color: var(--ivory); padding: calc(env(safe-area-inset-top) + 1.4rem) var(--pad-x) calc(env(safe-area-inset-bottom) + 2rem); display: grid; justify-items: center; align-content: start; gap: 1.6rem; overflow: hidden; }
+    .vc::before { content: ""; position: absolute; inset: -20% -20% auto; height: 70%; background: radial-gradient(closest-side, rgba(182,146,86,.18), transparent); pointer-events: none; }
+    .vc__top { width: min(100%, 520px); display: flex; justify-content: space-between; align-items: center; font-size: .6rem; font-weight: 500; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); }
+    .vc__top a { color: var(--ivory-mut); }
+    .vc .bcard-scene { width: min(100%, 520px); margin-top: .6rem; }
+    .vc .bcard-hint { margin-top: -.6rem; }
+    .vc__who { text-align: center; display: grid; justify-items: center; }
+    .vc__photo { width: 108px; height: 108px; border-radius: 50%; overflow: hidden; margin-bottom: 1rem; border: 1px solid var(--gold); outline: 1px solid rgba(182,146,86,.35); outline-offset: 5px; }
+    .vc__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+    .vc__who h1 { font-family: var(--ff-display); font-weight: 500; font-size: clamp(1.5rem, 6vw, 2.1rem); letter-spacing: .08em; color: #f5f0e6; }
+    .vc__who p { margin-top: .3rem; font-family: var(--ff-serif); font-style: italic; color: var(--gold-soft); font-size: 1.05rem; }
+    .vc__acts { width: min(100%, 520px); display: grid; grid-template-columns: repeat(3, 1fr); gap: .6rem; }
+    .vc__act { display: grid; justify-items: center; gap: .55rem; padding: 1.1rem .4rem; border: 1px solid var(--line-d); background: rgba(255,255,255,.02); font-size: .6rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--ivory); transition: background .4s, border-color .4s; text-align: center; }
+    .vc__act:hover { background: rgba(182,146,86,.1); border-color: var(--gold); }
+    .vc__act svg { width: 24px; height: 24px; stroke: var(--gold-soft); fill: none; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+    .vc__act--main { grid-column: 1 / -1; grid-template-columns: auto auto; justify-content: center; align-items: center; background: var(--gold); color: var(--ink); border-color: var(--gold); font-size: .7rem; padding: 1.15rem; }
+    .vc__act--main svg { stroke: var(--ink); }
+    .vc__act--main:hover { background: var(--gold-soft); }
+    .vc__qr { width: min(100%, 520px); display: grid; grid-template-columns: auto 1fr; gap: 1.2rem; align-items: center; padding: 1.2rem; border: 1px solid var(--line-d); }
+    .vc__qr img { width: 112px; height: 112px; background: var(--white); padding: 6px; }
+    .vc__qr b { display: block; font-family: var(--ff-serif); font-weight: 500; font-size: 1.15rem; color: #f5f0e6; }
+    .vc__qr p { margin-top: .3rem; font-size: .82rem; color: var(--ivory-mut); }
+    .vc__qr button { margin-top: .8rem; }
+    .vc__foot { margin-top: .6rem; font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: #6e685d; text-align: center; line-height: 2; }
+    @media (max-width: 420px) { .vc__acts { grid-template-columns: repeat(2, 1fr); } .vc__qr { grid-template-columns: 1fr; justify-items: center; text-align: center; } }
+  </style>
+  <script src="assets/data.js" defer></script>
+  <script src="assets/i18n.js" defer></script>
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <main class="vc">
+    <div class="vc__top"><span>Carte de visite</span><a href="index.html">damtruck.com →</a></div>
+
+    <div class="bcard-scene is-in">
+      <div class="bcard" role="button" tabindex="0" aria-pressed="false" aria-label="Carte de visite DAM TRUCK — toucher pour retourner">
+        <div class="bcard__face bcard__front">
+          <i class="bc-c bc-c--tl"></i><i class="bc-c bc-c--tr"></i><i class="bc-c bc-c--bl"></i><i class="bc-c bc-c--br"></i>
+          <div class="bc-content">
+            <div class="bc-top">
+              <img class="bc-logo" src="images/logo-mark-light.png" alt="" />
+              <div class="bc-tag">Concassage<br>Criblage<br>Matériel TP</div>
+            </div>
+            <div>
+              <div class="bc-name">Yassin Mchichi</div>
+              <span class="bc-sig" aria-hidden="true" translate="no">Yassin Mchichi</span>
+            </div>
+            <div>
+              <div class="bc-rule"></div>
+              <div class="bc-company"><b>DAM TRUCK</b><i>Chargé d'affaires</i></div>
+            </div>
+          </div>
+        </div>
+        <div class="bcard__face bcard__back">
+          <i class="bc-c bc-c--tl"></i><i class="bc-c bc-c--tr"></i><i class="bc-c bc-c--bl"></i><i class="bc-c bc-c--br"></i>
+          <div class="bc-back">
+            <div class="bc-back__logo"><img src="images/logo-dark.png" alt="DAM TRUCK" /></div>
+            <div class="bc-back__info">
+              <div class="bc-back__title">Coordonnées</div>
+              <div>
+                <div class="bc-row"><span>Tél</span><b>+212 661 24 35 44</b></div>
+                <div class="bc-row"><span>Mail</span><b>info@damtruck.com</b></div>
+                <div class="bc-row"><span>Web</span><b>damtruck.com</b></div>
+              </div>
+              <div class="bc-coords">Casablanca · Maroc</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="bcard-hint">Toucher pour retourner</p>
+
+    <div class="vc__who">
+      <div class="vc__photo vc__photo--mono">YM</div>
+      <h1>Yassin Mchichi</h1>
+      <p>Chargé d'affaires · DAM TRUCK</p>
+      <p class="vc__dom">Concassage · Machines · Suivi client</p>
+    </div>
+
+    <nav class="vc__acts" aria-label="Contacter Yassin Mchichi">
+      <a class="vc__act vc__act--main" href="yassin-mchichi.vcf" download><svg viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Enregistrer le contact</a>
+      <a class="vc__act" href="tel:+212661243544"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Appeler</a>
+      <a class="vc__act" href="https://wa.me/212661243544" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9.5c.5 2 2 3.6 4 4.5l1.2-1.2 2 .8"/></svg>WhatsApp</a>
+      <a class="vc__act" href="mailto:info@damtruck.com"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg>Email</a>
+      <a class="vc__act" href="index.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>Site web</a>
+      <a class="vc__act" href="machines.html"><svg viewBox="0 0 24 24"><path d="M3 17h13l2-5h3v5h-2M3 17V9h8l3 3M7 20a2 2 0 1 0 0-.1M17 20a2 2 0 1 0 0-.1"/></svg>Machines</a>
+      <a class="vc__act" href="https://www.google.com/maps/search/?api=1&amp;query=Sidi+Bernoussi+Casablanca" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Itinéraire</a>
+    </nav>
+
+    <div class="vc__qr">
+      <img src="images/qr-yassin.svg" alt="QR code vers la carte de visite de Yassin Mchichi" />
+      <div>
+        <b>Partagez cette carte</b>
+        <p>Faites scanner ce code, ou envoyez le lien en un geste.</p>
+        <button class="btn btn--gold" type="button" data-share>Partager <span class="btn__arrow">↗</span></button>
+      </div>
+    </div>
+
+    <p class="vc__foot">DAM TRUCK · Concassage &amp; Vente Achat Matériel TP<br>Sidi Bernoussi · Casablanca</p>
+  </main>
+  <script>
+    document.querySelector("[data-share]").addEventListener("click", async (e) => {
+      const url = location.href.split("#")[0], b = e.currentTarget;
+      try {
+        if (navigator.share) await navigator.share({ title: "Yassin Mchichi — DAM TRUCK", url });
+        else { await navigator.clipboard.writeText(url); b.firstChild.textContent = "Lien copié "; setTimeout(() => (b.firstChild.textContent = "Partager "), 2000); }
+      } catch (err) {}
+    });
+  </script>
+</body>
+</html>

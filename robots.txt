@@ -1,0 +1,8 @@
+# DAM TRUCK — www.damtruck.com
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /devis.html
+Disallow: /inspection.html
+
+Sitemap: https://www.damtruck.com/sitemap.xml
