@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plaque machine — DAM TRUCK</title>
+  <meta name="robots" content="noindex" />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Cinzel:wght@500;600&family=Jost:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    @page { size: 148mm 105mm; margin: 0 }
+    * { box-sizing: border-box; margin: 0; padding: 0 }
+    body { background: #2a2620; min-height: 100vh; display: grid; place-items: center; font-family: Jost, sans-serif; padding: 16px }
+    .plate { width: 148mm; height: 105mm; position: relative; color: #e8dcc0; overflow: hidden;
+      background: radial-gradient(120% 90% at 30% 10%, #2b2722 0%, #0b0b0c 70%); border-radius: 3mm;
+      box-shadow: 0 30px 80px rgba(0,0,0,.6), inset 0 0 0 0.6mm #b69256, inset 0 0 0 1.6mm #0b0b0c, inset 0 0 0 1.9mm #8c6f3f }
+    .plate::before { content: ""; position: absolute; inset: 0; background: url(images/guilloche-rosette.svg) 118% 50%/70% no-repeat; opacity: .12 }
+    .screw { position: absolute; width: 4.2mm; height: 4.2mm; border-radius: 50%; background: radial-gradient(circle at 35% 35%, #e3cc95, #6d5630 70%); box-shadow: inset 0 0 0 .3mm #3b2f1c }
+    .screw::after { content: ""; position: absolute; left: 18%; right: 18%; top: 46%; height: .5mm; background: #3b2f1c; transform: rotate(35deg) }
+    .s1 { left: 5mm; top: 5mm } .s2 { right: 5mm; top: 5mm } .s3 { left: 5mm; bottom: 5mm } .s4 { right: 5mm; bottom: 5mm }
+    .brand { position: absolute; left: 12mm; top: 11mm; font: 600 4.2mm Cinzel, serif; letter-spacing: 1.6mm; background: linear-gradient(120deg,#e3cc95,#b69256 40%,#8c6f3f 65%,#d7bd86); -webkit-background-clip: text; background-clip: text; color: transparent }
+    .sub { position: absolute; left: 12mm; top: 17.5mm; font: 500 2mm Cinzel, serif; letter-spacing: .9mm; color: #9b9486 }
+    .model { position: absolute; left: 12mm; top: 33mm; width: 72mm; font: 400 7.6mm/1.05 "Bodoni Moda", serif; color: #f1e6cc }
+    .type { position: absolute; left: 12mm; top: 53mm; width: 72mm; font-size: 2.7mm; color: #b8ad98 }
+    .rows { position: absolute; left: 12mm; bottom: 12mm; display: flex; gap: 7mm }
+    .rows span { display: block; font: 500 1.8mm Cinzel, serif; letter-spacing: .6mm; color: #8f866f }
+    .rows b { font: 400 4mm "Bodoni Moda", serif; color: #f1e6cc }
+    .qrbox { position: absolute; right: 12mm; top: 50%; transform: translateY(-50%); width: 44mm; text-align: center }
+    .qrbox .q { width: 44mm; height: 44mm; padding: 2.2mm; background: linear-gradient(135deg,#efe3c4,#d7bd86); border-radius: 1.5mm }
+    .qrbox .q img { width: 100%; height: 100% }
+    .qrbox p { margin-top: 2.2mm; font: 600 2mm Cinzel, serif; letter-spacing: .8mm; color: #d7bd86 }
+    .print { margin-top: 18px; text-align: center } .print button { background: none; border: 1px solid #b69256; color: #d7bd86; padding: 10px 22px; font: 500 12px Cinzel, serif; letter-spacing: .3em; cursor: pointer }
+    @media print { body { background: none; padding: 0; display: block } .plate { box-shadow: inset 0 0 0 0.6mm #b69256, inset 0 0 0 1.6mm #0b0b0c, inset 0 0 0 1.9mm #8c6f3f } .print { display: none } }
+  </style>
+  <meta name="robots" content="noindex" data-seo />
+  <meta name="description" content="Plaque d'identification d'une machine DAM TRUCK." />
+  <meta property="og:locale" content="fr_MA" />
+</head>
+<body>
+  <div>
+    <div class="plate" id="plate">
+      <span class="screw s1"></span><span class="screw s2"></span><span class="screw s3"></span><span class="screw s4"></span>
+      <div class="brand">DAM TRUCK</div>
+      <div class="sub">PASSEPORT MACHINE · CASABLANCA</div>
+      <div class="model" id="model">—</div>
+      <div class="type" id="type"></div>
+      <div class="rows"><div><span>RÉFÉRENCE</span><b id="ref">—</b></div><div><span>ANNÉE</span><b id="year">—</b></div><div><span>CONTACT</span><b>+212 661 14 73 11</b></div></div>
+      <div class="qrbox"><div class="q"><img id="qr" alt="QR" /></div><p>SCANNEZ · SCAN</p></div>
+    </div>
+    <div class="print"><button onclick="print()">IMPRIMER LA PLAQUE</button></div>
+  </div>
+  <script src="assets/data.js"></script>
+  <script>
+    (function () {
+      var DT = window.DT || {}, ref = new URLSearchParams(location.search).get("ref") || "";
+      var all = (DT.MACHINES || []).concat(DT.MACHINES_EXEMPLE || []);
+      var m = all.find(function (x) { return x.ref === ref; }) || all[0];
+      if (!m) return;
+      document.getElementById("model").textContent = m.title;
+      document.getElementById("type").textContent = m.type || "";
+      document.getElementById("ref").textContent = m.ref;
+      document.getElementById("year").textContent = m.year || "—";
+      document.getElementById("qr").src = "images/passport/qr-" + encodeURIComponent(m.ref) + ".svg";
+      document.title = "Plaque " + m.ref + " — DAM TRUCK";
+    })();
+  </script>
+</body>
+</html>

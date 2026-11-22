@@ -1,0 +1,60 @@
+
+/* Station Keestrack R6 — animation interactive (concassage) */
+.r6w { display: grid; gap: 1.6rem; }
+.r6__ctrl { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 1.4rem 2.6rem; }
+.r6__ctrl .field { display: grid; gap: .7rem; }
+.r6__xray-t { display: inline-flex; align-items: center; gap: .7rem; padding: .7rem 1rem; border: 1px solid rgba(236,230,217,.25); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; cursor: pointer; transition: border-color .35s, color .35s; }
+.r6__xray-t:hover { border-color: var(--gold); }
+.r6__xray-t input { accent-color: var(--gold); width: 1rem; height: 1rem; margin: 0; }
+.r6__frame { position: relative; border: 1px solid rgba(182,146,86,.35); outline: 1px solid rgba(182,146,86,.12); outline-offset: 6px; background:
+  radial-gradient(ellipse 60% 70% at 50% 40%, rgba(182,146,86,.10), transparent 70%),
+  linear-gradient(180deg, #121316 0%, #0d0e10 70%, #17140f 100%); overflow: hidden; }
+.r6__scroll { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.r6__scroll::-webkit-scrollbar { display: none; }
+.r6__scene { position: relative; min-width: 1500px; }
+@media (min-width: 901px) { .r6__scene { min-width: 0; } .r6__frame { margin-inline: calc(50% - min(50vw, 820px)); } }
+.r6__svg { display: block; width: 100%; height: auto; }
+.r6__cv { position: absolute; inset: 0; pointer-events: none; }
+.r6__grid line { stroke: rgba(182,146,86,.07); stroke-width: 1; }
+.r6__ground { stroke: rgba(182,146,86,.55); stroke-width: 2; }
+.r6__rockpile .rp, .r6__stock, .r6__fines { transition: fill .6s; }
+.r6__xray { opacity: 0; transition: opacity .6s; }
+.r6w.is-xray .r6__xray { opacity: 1; }
+.r6w [data-hot] > * { transition: opacity .6s; }
+.r6__scale line { stroke: rgba(215,189,134,.5); stroke-width: 1.5; }
+.r6__scale text { font: 400 12px Jost, sans-serif; letter-spacing: .1em; fill: rgba(215,189,134,.6); }
+.r6w .r6__xwin { opacity: 0; transition: opacity .6s; }
+.r6w.is-xray .r6__xwin { opacity: .92; }
+[data-hot].is-focus { filter: drop-shadow(0 0 10px rgba(215,189,134,.75)); }
+.r6__hot { cursor: pointer; outline: none; }
+.r6__hot circle:nth-child(2) { fill: var(--gold); }
+.r6__hot text { font: 600 12px var(--ff-sans, Jost, sans-serif); fill: var(--ink); pointer-events: none; }
+.r6__hotring { fill: none; stroke: var(--gold); stroke-width: 1.5; transform-origin: center; transform-box: fill-box; animation: r6ping 2.4s var(--ease, ease) infinite; }
+.r6__hot.is-on circle:nth-child(2), .r6__hot:hover circle:nth-child(2), .r6__hot:focus-visible circle:nth-child(2) { fill: #f5f0e6; }
+@keyframes r6ping { 0% { transform: scale(1); opacity: .9; } 80%, 100% { transform: scale(2.1); opacity: 0; } }
+.r6__swipe { display: none; position: absolute; right: .8rem; bottom: .7rem; padding: .45rem .7rem; background: rgba(11,11,12,.75); border: 1px solid rgba(182,146,86,.4); color: var(--gold-soft); font-size: .62rem; letter-spacing: .16em; text-transform: uppercase; pointer-events: none; animation: r6nudge 2.2s ease-in-out infinite; transition: opacity .5s; }
+.r6__frame.is-swiped .r6__swipe { opacity: 0; }
+@keyframes r6nudge { 50% { transform: translateX(-6px); } }
+.r6__legend { position: absolute; left: .9rem; top: .7rem; font-size: .58rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(215,189,134,.6); pointer-events: none; }
+.r6__panels { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+.r6__info, .r6__mat { padding: 1.4rem 1.6rem; border: 1px solid rgba(236,230,217,.14); background: rgba(255,255,255,.025); min-height: 9.5rem; }
+.r6__info small, .r6__mat small { display: block; font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); }
+.r6__mat small { margin-top: 1rem; letter-spacing: .04em; text-transform: none; font-size: .78rem; color: rgba(236,230,217,.6); font-style: italic; }
+.r6__info b, .r6__mat b { display: block; margin: .5rem 0 .55rem; font-family: var(--ff-display); font-weight: 500; font-size: 1.15rem; letter-spacing: .04em; color: #f5f0e6; }
+.r6__mat b { margin-top: 0; }
+.r6__info p, .r6__mat p { margin: 0; font-size: .92rem; line-height: 1.6; color: rgba(236,230,217,.82); }
+.r6__mat dl { display: flex; flex-wrap: wrap; gap: .4rem 1.6rem; margin: .9rem 0 0; }
+.r6__mat dl div { display: grid; gap: .15rem; }
+.r6__mat dt { font-size: .6rem; letter-spacing: .18em; text-transform: uppercase; color: rgba(236,230,217,.55); }
+.r6__mat dd { margin: 0; color: var(--gold-soft); letter-spacing: .2em; font-size: .85rem; }
+@media (max-width: 900px) {
+  .r6__panels { grid-template-columns: 1fr; }
+  .r6__swipe { display: block; }
+  .r6__ctrl { gap: 1.1rem; }
+  .r6__info, .r6__mat { min-height: 0; padding: 1.2rem 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) { .r6__hotring, .r6__swipe { animation: none; } }
+[dir="rtl"] .r6__scroll { direction: ltr; }
+[dir="rtl"] .r6__swipe { right: auto; left: .8rem; }
+.r6__hills { fill: #17140f; opacity: .9; }
+.r6__grid line { stroke: rgba(182,146,86,.05); }
